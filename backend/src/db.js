@@ -6,7 +6,7 @@ const { Pool } = pg;
 
 export const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    // ssl: { rejectUnauthorized: false } // activa esto solo si conectas a un Postgres gestionado con SSL
+    ssl: { rejectUnauthorized: false }
 });
 
 // helper: consulta con manejo de errores
